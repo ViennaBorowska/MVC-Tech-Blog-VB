@@ -18,6 +18,7 @@ router.get("/", withAuth, async (req, res) => {
 
     res.render("dashboard", {
       posts,
+      userId: req.session.userId,
     });
   } catch (err) {
     res.redirect("login");
@@ -35,7 +36,7 @@ router.get("/post/:id", withAuth, async (req, res) => {
     if (onePost) {
       const post = (await onePost).get({ plain: true });
       console.log(post, "does this work?");
-      return res.render("one-post-admin", { post });
+      return res.render("one-post-admin", { post, userId: req.session.userId });
     } else {
       res.status(404).end();
     }
