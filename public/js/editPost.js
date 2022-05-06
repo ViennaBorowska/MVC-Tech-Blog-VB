@@ -10,7 +10,7 @@ const updatePost = async (event) => {
     method: "PUT",
     body: JSON.stringify({
       title: upTitle,
-      body: upBody,
+      content: upBody,
     }),
     headers: { "Content-Type": "application/json" },
   });

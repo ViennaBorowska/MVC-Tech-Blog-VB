@@ -3,33 +3,37 @@ const { Post } = require("../models");
 const postData = [
   {
     id: 1,
-    title: "Tech Blog",
-    content: "what a mess!",
-    userId: 5,
+    title: "How Do You Centre A Div?",
+    content:
+      "Correctly named, I feel so foolish trying to get to grips with CSS!",
+    userId: 3,
   },
   {
     id: 2,
-    title: "Tech Blog",
-    content: "Is this working?!",
-    userId: 1,
-  },
-  {
-    id: 3,
-    title: "Tech Blog",
-    content: "Do we get an ID?!",
+    title: "Today...I Was Tired",
+    content:
+      "Taking breaks is an important part of work, just like staying hydrated!",
     userId: 2,
   },
   {
+    id: 3,
+    title: "Should I Buy Twitter?",
+    content:
+      "Internet people! Should I just buy Twitter and put it out of it's misery? Is that even possible?",
+    userId: 1,
+  },
+  {
     id: 4,
-    title: "Tech Blog",
-    content: "what a mess!",
+    title: "If I Ruled The World...",
+    content: "Oh wait...haha, whoops, silly me!",
     userId: 4,
   },
   {
     id: 5,
-    title: "Tech Blog",
-    content: "Why is this happening to me??!",
-    userId: 3,
+    title: "Hello? Is There Anybody Out There?",
+    content:
+      "The delcine of print media is the bane of my life. Must be wine o'clock somewhere.",
+    userId: 5,
   },
 ];
 

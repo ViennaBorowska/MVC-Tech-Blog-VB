@@ -18,6 +18,21 @@ router.put("/:id", withAuth, async (req, res) => {
   }
 });
 
+//endpoit /api/post
+router.post("/", withAuth, async (req, res) => {
+  try {
+    console.log(req.body);
+    const newPost = await Post.create({
+      title: req.body.title,
+      content: req.body.content,
+      userId: req.session.userId,
+    });
+    res.status(200).json(newPost);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 router.delete("/:id", withAuth, async (req, res) => {
   try {
     const delPost = await Post.destroy({

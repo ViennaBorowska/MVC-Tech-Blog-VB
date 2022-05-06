@@ -1,31 +1,33 @@
-<div class="container">
- {{#each posts}}
-<div class="box">
-  <article class="media  ">
-    <div class="media-left">
-      <div class="content">
-        <p>
-          <small>{{user.username}}</small>
-        </p>
-      </div>
+<div class="container is-justify-content-space-evenly">
+  {{#each posts}}
+    <div class="box">
+      <article class="media">
+        <div class="media-left">
+          <div class="content">
+            <p>
+              <small>{{user.username}}</small>
+            </p>
+          </div>
+        </div>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong>{{title}}</strong>
+            </p>
+          </div>
+        </div>
+        <div class="media-content is-flex">
+          <div class="content is-justify-content-flex-end">
+            <a href="/post/{{id}}">
+              <button
+                class="button is-dark postBtn"
+                value="{{id}}"
+              >Read</button>
+            </a>
+          </div>
+
+        </div>
+      </article>
     </div>
-    <div class="media-content">
-      <div class="content">
-        <p>
-          <strong>{{title}}</strong> 
-        </p>
-      </div>
-    </div>
-    <div class="media-content is-flex">
-     <div class="content is-justify-content-flex-end">
-          <a href="/post/{{id}}">
-            <button class="button is-dark postBtn" value="{{id}}">Read</button>
-          </a>
-      </div>
-      
-   
-    </div>
-  </article>
-</div>
- {{/each}}
+  {{/each}}
 </div>
